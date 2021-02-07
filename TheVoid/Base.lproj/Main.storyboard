@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheVoid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gg4-TS-JDQ">
+                                <rect key="frame" x="141" y="216" width="132" height="30"/>
+                                <state key="normal" title="Upload to The Void"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="kJN-Qt-uCi"/>
+                                    <action selector="editing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="1L3-Ao-9gy"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_5425" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cIS-UX-O8D">
+                                <rect key="frame" x="100" y="54" width="214" height="140"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zAv-l8-Lep">
+                                <rect key="frame" x="50" y="266" width="314" height="396"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2tk-bK-Yme"/>
+                                    <outlet property="textDropDelegate" destination="8bC-Xf-vdC" id="TRK-0n-f0K"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Amw-l4-gYr"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Amw-l4-gYr" firstAttribute="trailing" secondItem="zAv-l8-Lep" secondAttribute="trailing" constant="100" id="4kQ-PF-cQP"/>
+                            <constraint firstItem="gg4-TS-JDQ" firstAttribute="centerX" secondItem="Amw-l4-gYr" secondAttribute="centerX" id="DHr-p9-4ZD"/>
+                            <constraint firstItem="cIS-UX-O8D" firstAttribute="centerX" secondItem="Amw-l4-gYr" secondAttribute="centerX" id="Djy-yx-3c7"/>
+                            <constraint firstItem="zAv-l8-Lep" firstAttribute="leading" secondItem="Amw-l4-gYr" secondAttribute="leading" constant="50" id="IdI-Z9-rcv"/>
+                            <constraint firstItem="Amw-l4-gYr" firstAttribute="bottom" secondItem="zAv-l8-Lep" secondAttribute="bottom" constant="200" id="Rz7-bH-0RC"/>
+                            <constraint firstItem="cIS-UX-O8D" firstAttribute="leading" secondItem="Amw-l4-gYr" secondAttribute="leading" constant="100" id="Yhf-ru-FE2"/>
+                            <constraint firstItem="cIS-UX-O8D" firstAttribute="top" secondItem="Amw-l4-gYr" secondAttribute="top" constant="10" id="djb-1V-7JD"/>
+                            <constraint firstItem="Amw-l4-gYr" firstAttribute="trailing" secondItem="cIS-UX-O8D" secondAttribute="trailing" constant="-433" id="g1W-0X-Zq9"/>
+                            <constraint firstItem="Amw-l4-gYr" firstAttribute="trailing" secondItem="cIS-UX-O8D" secondAttribute="trailing" constant="100" id="jKq-ne-emc"/>
+                            <constraint firstItem="Amw-l4-gYr" firstAttribute="trailing" secondItem="zAv-l8-Lep" secondAttribute="trailing" constant="50" id="ryA-Ot-CJy"/>
+                            <constraint firstItem="zAv-l8-Lep" firstAttribute="top" secondItem="gg4-TS-JDQ" secondAttribute="bottom" constant="20" id="xAi-37-AYf"/>
+                            <constraint firstItem="gg4-TS-JDQ" firstAttribute="top" secondItem="cIS-UX-O8D" secondAttribute="bottom" constant="22" id="zH2-VO-pwj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4kQ-PF-cQP"/>
+                                <exclude reference="Rz7-bH-0RC"/>
+                                <exclude reference="ryA-Ot-CJy"/>
+                                <exclude reference="djb-1V-7JD"/>
+                                <exclude reference="IdI-Z9-rcv"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="4kQ-PF-cQP"/>
+                                <include reference="Rz7-bH-0RC"/>
+                                <exclude reference="g1W-0X-Zq9"/>
+                                <include reference="ryA-Ot-CJy"/>
+                                <include reference="djb-1V-7JD"/>
+                                <include reference="IdI-Z9-rcv"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <action selector="userTappedBaackgroundWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="VJA-DS-fG8"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="textview" destination="zAv-l8-Lep" id="1mJ-Fe-kQf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_5425" width="521" height="140"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
